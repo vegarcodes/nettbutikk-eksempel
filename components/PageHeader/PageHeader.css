@@ -1,0 +1,17 @@
+.pageheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: peachpuff;
+  padding: 1rem;
+
+  .pageheader__logo {
+    font-size: 1.2rem;
+    font-family: cursive;
+  }
+
+  .pageheader__nav {
+    display: flex;
+    gap: 1rem;
+  }
+}

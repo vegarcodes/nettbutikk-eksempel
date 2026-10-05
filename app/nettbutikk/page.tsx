@@ -13,10 +13,15 @@ export default async function Home() {
 
   return (
     <>
-      <h1>Forsiden</h1>
-      <p>
-        Velkommen til Hansen Kjøtt & Data!
-      </p>
+      <h1>Nettbutikk</h1>
+      <ProductGrid>
+        {products.map((item: Product) => (
+          <ProductCard 
+            key={item.id}
+            productItem={item}
+          />
+        ))}
+      </ProductGrid>
     </>
   );
 }

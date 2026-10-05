@@ -1,0 +1,14 @@
+.product-card {
+  background-color: antiquewhite;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  img {
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  & > * + * {
+    margin-top: 1em;
+  }
+}

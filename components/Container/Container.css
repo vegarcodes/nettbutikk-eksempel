@@ -1,0 +1,4 @@
+.container {
+  inline-size: min(960px, 96%);
+  margin-inline: auto;
+}
