@@ -1,36 +1,9 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# En enkel produktkatalog
 
-## Getting Started
+## Oppgave 1
 
-First, run the development server:
+Akkurat nå logger vi bare hvis en feil oppstår. Endre koden slik at en feilside vises om noe går galt ved datauthenting fra APIet!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Oppgave 2
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Utvid koden slik at vi får paginering i produktkatalogen. Akkurat nå vises bare 30 produkter av gangen. Brukeren skal kunne gå til `/nettbutikk/side/2` for å få de neste 30 produktene og så videre. Det skal være mulig å navigere frem og tilbake mellom sidene (både "forrige side" og "neste side"), og linkene skal ikke vises om det ikke er produkter på disse sidene.
