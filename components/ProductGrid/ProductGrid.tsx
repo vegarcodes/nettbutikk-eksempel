@@ -1,15 +1,22 @@
+import { Product } from "@/types/Product.type";
 import "./ProductGrid.css";
+import ProductCard from "../ProductCard/ProductCard";
 
 export type ProductGridProps = {
-  children: React.ReactNode
+  products: Product[]
 }
 
 export default function ProductGrid({
-  children
+  products
 }: ProductGridProps) {
   return (
     <section className="product-grid">
-      {children}
+      {products.map((item: Product) => (
+        <ProductCard 
+          key={item.id}
+          productItem={item}
+        />
+      ))}
     </section>
   )
 }

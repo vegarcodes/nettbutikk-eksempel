@@ -1,6 +1,5 @@
+import Pagination from "@/components/Pagination/Pagination";
 import ProductGrid from "@/components/ProductGrid/ProductGrid";
-import ProductCard from "@/components/ProductCard/ProductCard";
-import { Product } from "@/types/Product.type";
 import { PRODUCT_API_ENDPOINT } from "@/constants/product-api";
 
 export default async function Home() {
@@ -10,19 +9,20 @@ export default async function Home() {
     console.log("Not OK!");
   }
 
-  const { products } = await response.json();
+  const { products, limit, total, skip } = await response.json();
 
   return (
     <>
       <h1>Nettbutikk</h1>
-      <ProductGrid>
-        {products.map((item: Product) => (
-          <ProductCard 
-            key={item.id}
-            productItem={item}
-          />
-        ))}
-      </ProductGrid>
+
+      <ProductGrid products={products} />
+
+      <Pagination
+        pageNumber={1}
+        limit={limit}
+        total={total}
+        skip={skip}
+      />
     </>
   );
 }

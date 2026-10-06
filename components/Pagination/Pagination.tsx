@@ -1,15 +1,38 @@
+import Link from "next/link";
 import "./Pagination.css";
 
 export type PaginationProps = {
-  children: React.ReactNode;
+  pageNumber: number;
+  total: number;
+  skip: number;
+  limit: number;
 }
 
 export default function Pagination({
-  children
+  pageNumber,
+  total,
+  skip,
+  limit
 }: PaginationProps) {
   return (
     <nav className="pagination">
-      {children}
+      <div>
+        {pageNumber >= 2 && (
+          <Link
+            href={`/nettbutikk/side/${pageNumber - 1}`}>
+              Forrige side
+          </Link>
+        )}
+      </div>
+
+      <div>
+        {total > (skip + limit) && (
+          <Link 
+            href={`/nettbutikk/side/${pageNumber + 1}`}>
+              Neste side
+          </Link>
+        )}
+      </div>
     </nav>
   );
 }
