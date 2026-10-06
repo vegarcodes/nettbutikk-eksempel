@@ -23,7 +23,7 @@ export default function ProductCard({
     </h2>
     <p>{productItem.description}</p>
     <p>
-      <Link href={`/nettbutikk/${productItem.id}`}>Kjøp {productItem.title}</Link>
+      <Link href={`/nettbutikk/produkt/${productItem.id}`}>Kjøp {productItem.title}</Link>
     </p>
   </article>
  )
