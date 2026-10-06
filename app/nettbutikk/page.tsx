@@ -1,9 +1,10 @@
 import ProductGrid from "@/components/ProductGrid/ProductGrid";
 import ProductCard from "@/components/ProductCard/ProductCard";
 import { Product } from "@/types/Product.type";
+import { PRODUCT_API_ENDPOINT } from "@/constants/product-api";
 
 export default async function Home() {
-  const response = await fetch("https://dummyjson.com/products");
+  const response = await fetch(PRODUCT_API_ENDPOINT);
 
   if (!response.ok) {
     console.log("Not OK!");
