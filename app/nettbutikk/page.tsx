@@ -1,27 +1,28 @@
 import ProductGrid from "@/components/ProductGrid/ProductGrid";
-import ProductCard from "@/components/ProductCard/ProductCard";
-import { Product } from "@/types/Product.type";
+import { PRODUCT_API_ENDPOINT } from "@/constants/product-api";
+import Pagination from "@/components/Pagination/Pagination";
 
 export default async function Home() {
-  const response = await fetch("https://dummyjson.com/products");
+  const response = await fetch(PRODUCT_API_ENDPOINT);
 
   if (!response.ok) {
     console.log("Not OK!");
   }
 
-  const { products } = await response.json();
+  const { products, limit, skip, total } = await response.json();
 
   return (
     <>
       <h1>Nettbutikk</h1>
-      <ProductGrid>
-        {products.map((item: Product) => (
-          <ProductCard 
-            key={item.id}
-            productItem={item}
-          />
-        ))}
-      </ProductGrid>
+      
+      <ProductGrid products={products} />
+      
+      <Pagination 
+        pageNumber={1}
+        limit={limit}
+        skip={skip}
+        total={total}
+      />
     </>
   );
 }

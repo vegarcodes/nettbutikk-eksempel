@@ -1,0 +1,15 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 2rem;
+
+  a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: peachpuff;
+    color: black;
+    text-decoration: none;
+    border-radius: 100vh;
+  }
+}
