@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Form from "next/form";
+import { MagnifyingGlassIcon } from "@phosphor-icons/react/dist/ssr";
 import "./PageHeader.css";
 
 export default function PageHeader() {
@@ -12,6 +14,26 @@ export default function PageHeader() {
           <Link href={"/om-oss"}>Om oss</Link>
           <Link href={"/nettbutikk"}>Nettbutikk</Link>
         </nav>
+        <Form
+          action="/sok"
+          formMethod="GET"
+        >
+          <div className="pageheader__search">
+            <input 
+              type="text" 
+              className="pageheader__search__input"
+              name="q" 
+            />
+
+            <button 
+              type="submit" 
+              className="pageheader__search__button"
+            >
+              <MagnifyingGlassIcon />
+            </button>
+          </div>
+        </Form>
+
     </header>
   );
 }

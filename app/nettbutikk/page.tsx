@@ -2,7 +2,11 @@ import ProductGrid from "@/components/ProductGrid/ProductGrid";
 import { PRODUCT_API_ENDPOINT } from "@/constants/product-api";
 import Pagination from "@/components/Pagination/Pagination";
 
-export default async function Home() {
+export default async function WebshopPage() {
+  if (process.env.NODE_ENV === "development") {
+    await new Promise((resolve) => setTimeout(resolve, 20000));
+  }
+
   const response = await fetch(PRODUCT_API_ENDPOINT);
 
   if (!response.ok) {

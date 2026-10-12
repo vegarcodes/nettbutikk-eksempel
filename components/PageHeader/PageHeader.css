@@ -14,4 +14,29 @@
     display: flex;
     gap: 1rem;
   }
+
+  .pageheader__search {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    &:focus-within {
+      outline: 2px solid blue;
+    }
+  }
+
+  .pageheader__search__input {
+    border: none;
+    outline: none;
+  }
+
+  .pageheader__search__button {
+    background: none;
+    border: none;
+    line-height: 1;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
 }
