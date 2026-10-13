@@ -1,0 +1,52 @@
+.skeleton-card {
+  border-radius: 0.5rem;
+  min-block-size: 300px;
+}
+
+.skeleton-title {
+  block-size: calc(2rem * 1.2);
+  border-radius: 0.5rem;
+  margin-block: 2rem;
+  inline-size: 40ch;
+}
+
+.skeleton-text-wrapper {
+  margin-block-end: 2rem;
+  & > * + * {
+    margin-block-start: 0.67rem;
+  }
+
+  .skeleton-text-line {
+    block-size: 1rem;
+    border-radius: 100vh;
+
+    &:last-child {
+      inline-size: 40ch;
+    }
+  }
+}
+
+.shimmer {
+  background-color: #eaeaea;
+  background-size: 400%;
+  background-image: linear-gradient(
+    to right,
+    #eaeaea 33%,
+    #cccccc 50%,
+    #eaeaea 67%
+  );
+  animation-name: shimmering;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shimmering {
+  0% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
