@@ -1,0 +1,19 @@
+.shopping-cart-overview {
+  border-radius: 0.5rem;
+  background-color: peachpuff;
+  padding: 1rem;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    padding-block: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 20ch;
+
+    & + li {
+      border-block-start: 1px solid rgb(0 0 0 / 10%);
+    }
+  }
+}

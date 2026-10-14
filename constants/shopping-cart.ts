@@ -1,0 +1,1 @@
+export const SHOPPING_CART_LOCALSTORAGE_KEY = "hansenLocalStorage" as const;
