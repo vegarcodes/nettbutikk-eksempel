@@ -1,0 +1,1 @@
+export const SHOPPING_CART_STORAGE_KEY = "hansenShoppingCart" as const;
